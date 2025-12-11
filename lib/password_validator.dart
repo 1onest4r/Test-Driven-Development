@@ -2,17 +2,17 @@
 class PasswordValidator<T> {
   final _password;
   PasswordValidator(this._password);
-  
+
   //now include every other checking method to one big powerful function
   bool validatePassword() {
     bool isFound = false;
     final size = checkLength();
     final upper = checkUpper();
-    final int = checkForInt();
+    final integer = checkForInt();
     final symbol = checkForSymbol();
     final space = checkForSpace();
 
-    if (size && upper && int && symbol && space) {
+    if (size && upper && integer && symbol && space) {
       isFound = true;
     }
     return isFound;
@@ -33,7 +33,7 @@ class PasswordValidator<T> {
     for (int i = 0; i < bigAplhabet.length; i++) {
       if (string.contains(bigAplhabet[i])) {
         isFound = true;
-      } 
+      }
     }
     return isFound;
   }
@@ -48,7 +48,7 @@ class PasswordValidator<T> {
       if (string.contains(decimalNums[i])) {
         isFound = true;
       }
-    } 
+    }
     return isFound;
   }
 
@@ -76,3 +76,4 @@ class PasswordValidator<T> {
     return isFound;
   }
 }
+
